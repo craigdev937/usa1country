@@ -41,7 +41,7 @@ export const Country = () => {
                                     src={item.flags.png} 
                                     alt={item.flags.alt} 
                                 />
-                                <aside className="country-content">
+                                <aside className="country__data">
                                     <h3>{item.name.common}</h3>
                                     <p>
                                         Popularion: <span>{item.population}</span>

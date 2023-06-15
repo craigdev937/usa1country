@@ -5,8 +5,8 @@ import { Country } from "./Country";
 export const Home = () => {
     return (
         <React.Fragment>
-            <section className="home-page-container">
-                <aside className="input-container">
+            <section className="home">
+                <aside className="home__input">
                     
                 </aside>
                 <Country />

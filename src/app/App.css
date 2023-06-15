@@ -41,5 +41,14 @@ body {
     display: none;
 }
 
+.main__con {
+    height: 100%;
+    width: 100%;
+    background-color: var(--light-mode-bg);
+}
+
+.main__con.dark {
+    background-color: var(--dark-mode-bg);
+}
 
 
