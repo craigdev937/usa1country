@@ -1,0 +1,33 @@
+.country {
+    width: 100%;
+    height: 100%;
+    margin-top: 5rem;
+    padding: 0 5rem;
+    display: grid;
+    grid-template-columns: 
+        repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 2rem;
+}
+
+.country__card {
+    max-width: 100%;
+    background-color: var(--color-white);
+    margin-bottom: 8rem;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 5px 5px 10px 0px #dfd5d5;
+    color: var(--light-mode-text);
+}
+
+.main__con.dark .country__card {
+    background-color: var(--dark-blue-elements);
+    color: var(--color-white);
+    box-shadow: 5px 5px 10px 0px #1a1717;
+}
+
+
+.country__image {
+    display: block;
+    width: 100%;
+    height: 50%;
+}
