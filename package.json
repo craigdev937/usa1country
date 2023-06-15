@@ -7,7 +7,7 @@
     "dev": "webpack serve --mode development",
     "pro": "webpack --mode production"
   },
-  "keywords": ["React", "TypeScript", "React-Router", "Webpack", "Redux-Toolkit", "Frontend Mentor"],
+  "keywords": ["Fetch API", "createAsyncThunk", "React", "TypeScript", "React Router", "Webpack", "Redux-Toolkit", "Frontend Mentor"],
   "author": "Craig Johnson",
   "license": "ISC",
   "dependencies": {

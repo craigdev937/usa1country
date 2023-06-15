@@ -4,7 +4,7 @@ import { API } from "../global/FetchAPI";
 
 const initialState: IState = {
     countries: [],
-    countrySearched: [],
+    info: [],
     region: "",
     searchTerm: "",
     loading: false,
@@ -16,7 +16,7 @@ const CountrySlice = createSlice({
     initialState: initialState,
     reducers: {
         reset: (state) => {
-            state.countrySearched = [],
+            state.info = [],
             state.region = "",
             state.loading = false,
             state.error = null
@@ -57,7 +57,21 @@ const CountrySlice = createSlice({
         builder.addCase(API.code.fulfilled.type, 
         (state, action: PayloadAction<ICountry[]>) => {
             state.loading = false,
-            state.countrySearched = [...action.payload]
+            state.info = [...action.payload]
+        });
+        builder.addCase(API.region.rejected.toString(), 
+        (state, action: PayloadAction<IState>) => {
+            state.loading = false,
+            state.error = action.payload.error
+        });
+        builder.addCase(API.region.pending, (state) => {
+            state.error = null,
+            state.loading = true
+        });
+        builder.addCase(API.region.fulfilled.type, 
+        (state, action: PayloadAction<string>) => {
+            state.loading = false,
+            state.region = action.payload
         });
     },
 });

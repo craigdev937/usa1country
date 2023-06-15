@@ -86,7 +86,7 @@ export interface ICountry {
 
 export interface IState {
     countries: ICountry[],
-    countrySearched: ICountry[],
+    info: ICountry[],
     region: string,
     searchTerm: string,
     loading: boolean,
